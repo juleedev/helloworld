@@ -1,0 +1,11 @@
+stages:
+    - build
+    - test
+    - deploy
+    
+job_make_patch:
+    only: tags
+    tags:
+      - master
+    image: node:10.19
+    stage: build
